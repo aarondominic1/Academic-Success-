@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Use the latest 2.1 version of CircleCI pipeline process engine.
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
@@ -24,3 +25,35 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+=======
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            python -m venv venv
+            source venv/bin/activate
+            pip install -r requirements.txt
+
+      - run:
+          name: Run Unit Tests
+          command: |
+            python -m pytest tests
+
+      - run:
+          name: Data Analysis and Visualization
+          command: |
+            jupyter nbconvert --execute your_analysis_notebook.ipynb
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+>>>>>>> 3411205 (Importing the student data for the analysis)
