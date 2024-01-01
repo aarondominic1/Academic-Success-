@@ -1,11 +1,12 @@
 # Importing Libraries 
 
 import pandas as pd 
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
 
 #Reading the data file into project 
 student_data = pd.read_csv("students.csv")
 print(student_data)
+
 
 #Hypothesis: The academic success of students is influenced by a combination of demographic, socio-economic, and educational factors.
 
@@ -17,4 +18,3 @@ plt.title('Relationship between Previous Qualifications and Academic Success')
 plt.xlabel('Previous Qualification Grade')
 plt.ylabel('Average Academic Success')
 plt.show()
-
