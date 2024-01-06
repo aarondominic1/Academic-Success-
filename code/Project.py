@@ -163,6 +163,18 @@ plt.xlabel('Inflation Rate')
 plt.ylabel('Frequency')
 plt.show()
 
+# Count plot for Scholarship Holder vs Gender
+plt.figure(figsize=(8, 6))
+sns.countplot(x='Scholarship holder', hue='Gender', data=student_data, palette='Set2')
+plt.title('Count Plot: Scholarship Holder vs Gender')
+plt.xlabel('Scholarship Holder')
+plt.ylabel('Count')
+plt.show()
+
+
+
+
+
 
 
 
